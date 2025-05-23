@@ -1,0 +1,1044 @@
+(Bootstrap) + (tailwind css) => موقعين فيو امثلة للويب ديزاين
+
+best practice is to write the identifier like this (user-name) kebab case
+
+ctrl + w => replace word with other
+
+selector {
+        property: value;
+}
+
+.class {
+}
+
+#id {
+        it is better to not use the id 
+}
+
+color => تغير لون الخط
+
+
+background-color => تغير خلفية النص للون
+                 => red 
+                 => rbg (225, 0, 0)
+                 => rbg (12 44 66 / 70%)
+                 => #FF0000
+                 => transparent شفاف
+
+
+background-image => url("رابط الصورة") => تغير خلفية النص لصورة
+
+
+background-repeat => يكرر الصورة في جميع الاتجاهات => the Default value is repeat 
+                    repeat-x => التكرار الافقي
+                    repeat-y => التكرار العامودي   
+                    no repeat => لا تكرر الصورة 
+
+
+background-attachment => the defult value is scroll
+                        scroll => لايتحرك الصورة مع المستخدم
+                        fixed => يتحرك الصورة مع المستخدم                               
+
+
+background-position =>  value1 value2
+                        مكان الباك كروند => Default center => 100px 300px => 50% 20% 
+                        عندي تسع اتجاهات 
+                        :يمين:     نص:   يسار
+                        3فوق1    فوق2     فوق
+                        6وسط4    وسط5    وسط
+                        تحت7     تحت8    تحت9
+                        left top   - center top  -  right top
+                        left center - center center - right center
+                        left bottom - center bottom - right bottom
+                        + بقدر اتعامل مع نسب مئوية + بالبكسل
+
+
+background-size =>  width height
+                   بزبط الصورة حسب الشاشة بحيث مايضل فراغ + نسب مئوية
+                   auto => كانو ماعملت شي
+                   cover => بغطي الصفحة عندي بس بينقص وبيتمدد الصورة
+                   contain => بعني اللي بيقدر عليه لكن مابقص من شي
+
+padding + border => add width to the element
+
+
+padding => top right bottom left
+        => هوامش => dont accept negative numbers => 10px 20px 15px
+        => padding-bottom .......... // x,right=20px,bottom=15px,left=right=20px                   
+
+
+margin => هوامش خارجية => accept negative number => حيث بطلع برا الصفحة
+//       => margin-bottom .......... => 100% => auto => اذا في زيادة فوزعي صح
+//
+//      width: 70% => شقد بياخد مساحة من المجال اللي هو فيه => (70%) => معناتو ضل تلاتين من الهوامش الخارجية
+//                                                    => بوزع اللي ضل للمارجن  
+//      margin: auto;
+//
+//      values for width => fit content  => ع قد المحتوى 
+//                       => min-content => بقطع الجملة وبختار اكبر جملة وبحطو طول المحتوى      
+//                       => max-content => بحط الجملة كلا ع سطر واحد حتى لو طلع عن البراوزر                                                               
+//       min-width => اقل عرض
+//       max-width => اكبر عرض
+//       min-height => اقل طول
+//       max-height => اكبر طول
+
+
+border => الاطار تبع النص اللي عندي حيث كلما زدنا سماكتو بزيد سماكة الفريم اللي النص موجود فيه 
+        border-style => نوع البوردر
+        border-color => لون  البوردر 
+        border-width => حجم البوردر
+        border-radius => انحناء زوايا البوردر
+
+
+outline => 10px solid red;
+        => بوردر خارجي مابياخد من مساحة الاطار تبع النص
+        => لا يقبل الاتجاهات الاربعة ولا ينصح استخدامه
+
+
+// font = خط 
+        shorthand=> font: font-style font-variant font-weight font-size/line-height font-family; //font-size font-family هدول اجباري
+                    font: italic small-caps bold 10px/100px fantasy;    
+
+
+font-size => حجم الخط
+
+
+font-style => نوع الخط 
+           => italic
+           => normal  
+
+
+font-weight => bold => غمق الخط 700px
+            => normal => 400px    
+
+
+font-variant => شكل الخط
+             => small-caps : احرف كبيرة ولكن مصغرة  
+             => لا يستخدم مع اللغة العربية    
+
+text-decoration => تزين الخط
+                => line-through => بيعمل خط بنص النص
+                => استخدامو الوحيد اني شيل الخط من تحت الينكات عن طريق استخدام  non
+
+
+text-transform => capitalize التحويل اول حرف للاحرف الكبيرة
+               => uppercase 
+
+
+font-family =>اسم الخط
+              web fonts => here we can use fonts and it will work even if the user dont have it in their computers
+              serif (have breaks) or sans-serif (there is no breaks ) => this is the type of the families
+              we can add more than one family like that:
+              Arial, helvetica, sans-serif;  
+              لمعرفة اذا الخط امن للاستخدام نبحث في غوغل عن الاتي
+              web safe fonts   
+              teps how to use google fonts :
+              1- go to browser fonts
+              2- select any font you want
+              3- go to selected families 
+              4- then choose @import and copy the style 
+              5- pasted in your css file without styles tages
+              6- copy font-family : .....; 
+              7- DONE
+
+
+text-shadow => (H-Shado الافق _ V-Shadow العامود _ Blur الشفافية _ Color اللون )  موجه للنصوص
+                 => (1px -12px 2px red)  we dont use it alot   
+
+
+
+Alignment => المحاذة
+        text-align => موقع النص ضمن الخط الافقي اللي موجود فيه
+                right 
+                left
+                center
+
+ 
+        Direction  => اتجاه النص
+                => ltr (left to right)
+                => rtl (right to left)
+
+
+        Vertical-align  => top
+                        => middle 
+                        => bottom  
+
+
+letter-spacing => 2px المسافة بين كل حرف وحرف
+                => بنستخدمو وقت بستخدم خطوط معينة وبس  بدي يقربو من بعض اكتر او يبعدو 
+
+
+text-indent => indentation => المساحة الفاضية => (100px) => مساحة من اليسار بمقدار 100
+                           => similiar to padding بس لايعتبر هامش بنستخدمو وقت بدي اعمل كود واترك مساحة
+                           => بياخد قيم سالبة فبطلع برا الصفحة 
+
+
+word-spacing => مسافات بين الكلمات => (2px)
+
+
+line-height => المسافة بين النصوص + بتزبط وضع الخط طوليا
+            => الافضل للعين هو (1.6 or 1.7)   
+
+
+white-space => normal => اول مايخلص المساحة تبع الاب بنزل لتحت
+            => nowrap => بطلع برا المساحة 
+            => من اجل العناوين بدل ماينزلو لتحت ويطلع الشكل مو عنوان بعمل(nowrap) وبخليه يطلع نقاط انو  لسا العنوان ما خلص   
+            =>pre =>  بحافظ على كلشي مسافات انا بتركو حتى لو طلع برا المحتوى
+            =>pre-wrap => نفسو اللي فوقو بس بيعمل راب 
+            =>pre-line => بس اللاين بتركو ع حالو يعني المسافات بين الكلمات ضمن سطر واحد مابيشتغل
+
+
+word-break => بيعمل بريك لكلمة وحدة طويلة
+           => break-word و break-all 
+
+
+box-shadow => كلشي عدا النصوص
+           => (H-Shado الافق _ V-Shadow العامود _ Blur الشفافية  _ spread الانتشار _ Color اللون _ Inset من جوا الشادو)
+           => (1px 1px 10px 10px red) => الشادو من برا
+           => (1px 1px 10px 10px red inset) => الشادو من جوا
+           => 1px 1px 10px 10px red inset , 2px 2px 10px 10px yellow inset , .....
+           
+
+box-sizing => content-box => if i increase or add a padding and margin the line will get a line down
+           => border-box => but if we use this it will keep the elements in one line however we increase the padding or the margin
+           * {
+                -webkit-box-sizing : border-box;
+                -moz-box-sizing : border-box;
+                box-sizing : border-box;
+           }    
+           يفضل هيك نستخدمو
+
+
+text-overflow => ellipsis
+                بحط تلت نقاط انو في الا كمالة
+                بس لازم استخدم معو الاوفر فلو
+
+
+overflow => (وقت بحدد عرض وارتفاع معين وبكتب نص وطلع هاد النص خارج المجال المحدد بنسيمه اوفرفلو)
+        , overflow-x , overflow-y 
+                => Default (visible) => كلشي برا النص ماتمسحو
+                => hidden => بيسمح كلشي طلع برا الاطار
+                => scroll => مابيخفي المحتوى لكن  بيعطيك خاصية تعمل سكرول جوا الاطار
+                => auto => الاحسن فين بيعمل سكرول اذا لزم 
+
+
+background-origin =>(box model) تتحكم في المنطقة التي تقع فيها صورة الخلفية في ال
+                  =>border-box => من عند البوردر
+                  =>content-box => من عند المحتوى
+                  =>padding-box =>Default value => من عند الهامش الداخلي ببلش 
+        shorthand => background: background-color background-image background-repeat background-position/background-size background-origin   
+                     background: red url(" ") repeat center/cover content-box;  
+
+
+background-image => linear-gradient => بيعطي خليفة مدموجة بكذا لون
+                                    => linear-gradient(direction,color1 (20% ,100px how much i want it to take),color2,color3, ....   ) 
+                                                                         20%(0 -> 20)                           20%(20 -> 100)
+                                                    =>(to left - red - orange)   
+                                                      (to top right or to bottom left or 80deg......)
+                                                      you should not make it 50% to 50%  لازم نترك مجال للدمج
+                                                      background-image: linear-gradient(to bottom, #229a96 20% , red 20% , red 40%  , transparent);
+                                                      transparent=> يعني روح للشفافية
+                 => radial-gradient => بييعطي دمج بس لجوا يعني بيضوي
+                                    => ( circle دائرة (100px)/ellipsi بيضوي (100px 300px) at top/at right/at right center,red,green)     
+
+
+display => BLOCK
+           INLINE
+           INLINE-BLOCK     
+                        display: 
+                        Block
+                        div => block element
+                        -Take Full Width If No Width
+                        -Add line Break Before And After The Text
+                        -Respect Padding ,Margin ,Width ,Height ....
+
+                        inline
+                        span => inline element
+                        -Do Not Respect Width,Height 
+                        -Do Not Add Line Break
+                        -Respect pading and margin (right and left only)
+                        -Allow Elements Before And After It 
+                        from left and right only
+                        Respect => بقصد فيه وقت بستعملو فبيشتغل 
+
+                        inline-Block
+                        -Allow Elements Before And After It 
+                        -Respect Padding ,Margin ,Width ,Height ...
+          none => غير موجود => we use it  مثلا دخلت ع موقع فانا بكبس بطلعلي كذا خيار برجع بكبس بخفيلي الخيارات
+                (بيخفي وبيمسح محلو , فبياخد اللي بعدو محلو)
+
+
+visibility => معبرة عن الظهور => Default (visible) 
+                 hidden =>بيخفي الشي اللي خفيتو ولكن بترك محلو فراغ
+
+
+cursor => ماذا يفعل عند هذا العنصر
+       => pointer => قابل للضغط
+       => grab => بقدر امسكو وحركو 
+       => move => بطلع اشارة الزائد عندما بكبس ع الكلمة او الجملة اللي محددتا
+
+
+float => معناها يطفو 
+        اذا عندي عناصر عم تغرق تحت بعض بعملن فلوت فبطلعو كلن لفوق
+        => right 
+        => left
+        +بطلعو من محلن 
+        فكلشي تحتو بطلع محلو ولحل هل المشكلة نستخدم الكلير
+
+
+clear => هو صاير متل الجدار بين العناصر اللي طافو والعناصر اللي تحتو
+      => both بحطو بديف لحال
+      <div class="clear"></div>
+      .clear {
+        clear : both;
+      }  
+
+        ///////////////////////////////////////////////////////////
+        HTML:
+                <!DOCTYPE html>
+                <html lang="en">
+                        <head>
+                                <meta charset="UTF-8">
+                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                <title>Document</title>
+                                <link rel="stylesheet" href="test.css">
+                        </head>
+                        <body>
+                                <div class="parent">
+                                <div>one</div>
+                                <div>two</div>
+                                <div>three</div>
+                                <div>four</div>
+                                <p class="clear"></p>
+                                </div>
+                                <p>ava atto</p>
+                        </body>
+                </html>
+        CSS:
+                .parent div {
+                        background-color: #ddd;
+                        padding: 10px 0;
+                        margin: 10px 0;
+                        float: left;
+                        width: 25%;
+                        text-align: center;
+                }
+                .parent {
+                        background-color: black;
+                        padding:0 10px;
+                }
+                .clear {
+                        clear: both;
+                }
+        ///////////////////////////////////////////////////////////
+
+gap => بتحطي بالبكسل فبيترك مسافات بين كل سطر وفوق  
+
+
+opacity => الشفافية للمحتوى كاملا
+        =>( 1 - 0 ) يستخدم وقت بدي طلع شاشة صغيرة بنص الصفحة وبدي الخلفية من ورا تشف 
+
+
+       (left-right-top-bottom) position خاصيين بهذه الخاصية 
+position========================>
+        1.المكان الاصلي ماذا سيحدث فيه?
+        2.حركة العنصر ستكون بالنسبة لمين?
+        ========================>
+         => static => هو الحالة الطبيعية للصفحة عندي => Default
+                       (left-right-top-bottom) حيث لايتاثر بال
+         =>relative => نسبي => (بتحرك بناءا على نفسه)
+                left - right - bottom - top
+                left : 10px => هذا يعني حرك عشرة بكسل بناءا على نفسو يعني حركو من محلو بمقدار عشرة
+                1. بحافظ على المكان اللي هو فيه
+                2. بالنسبة لنفسه
+         =>absolute => the element goes out the workflow (flow على page)
+                بياخد العرض حسب عرض محتواه احيانا => اللي تحتو بطلع محلو وبكون وراه
+                يعني بطلع من محلو لقدام
+                bottom : 0px; => رح ينزل لاخر الصفحة
+                right: 0px; => رح ياخدو لليمين ويلزقو فيا 
+                if the father does not have a position then they will move relate to the web page which is the body
+                but if we give the father any father a position like relative position they will move relate to it
+                1. لايحافظ على مكانه الاصلي
+                2. يتحرك بالنسبة للاب او لاقرب اب يمتلك position
+         fixed => بتحرك بناءا على الصفحة بغض النظر هو فين باي اب يعني + بضل موجود معك بتحرك معك وانت بتعمل سكرول للصفحة
+         sticky => وقت بتدخلي ع صفحة ويب بتنزلي بالصفحة بتلاقي محل النافيكيشن وقت وصل للسقف ثبت محلو 
+                هاد هو الستيكي يعني علق(بالنسبة للاب طبعا  بعدا رح يختفي اذا طلع عن الاب تبعو)
+
+
+z-index => ترتيب الطبقات 
+        اذا عندي كذا طبقة كلن ورا بعض فالترتيب الطبيعي الن هو حسب ذكورن في صفحة الايتش تي ام ايل
+        فهون كلما حطيت رقم اكبر فرح يكون الاول
+        اما اذا حطيت لعنصرين نفس الرقم برجع للايتش تي ام ايل وبرتبن حسب ذكورن بالصفحة
+        z-index : 1;// وهاد بعدو
+        z-index : 2;// هاد اعلى واحد 
+        +  مارح يشتغل(position) هل الخاصية من دون ال
+
+
+ul-ol-dl: 
+shorthand => list-style : type position image;
+          => list-style : none;     
+        list-style-type => بغير من شكل الترقيم
+                        => disc => تركو متل ماهو
+ 
+        list-style-position => outside => يعني التنقيط مو من ضمنو 
+                        => inside => صار ضمن الباك كرواند        
+
+        list-style-image => url(" ") محل التنقيط بحط صورة
+
+
+border-spacing => المسافات بين عناصر الجدول 
+                بنقدر نقول سماكة الجدول   
+  
+
+transition=> remember ماتحطي الخاصية جوا البسودو حطيه مع العنصر نفسو
+           =>duration مدة الانتقال من حالة الى حالة
+           =>property الخواص اللي رح نتحكم فيها    
+           =>dely التاخير (هل الانتقال فورا يصير ولا بعد مدة) 
+           =>timing function طريقة الانتقال           
+        transition-duration => 1s or 1000ms 
+                transition-duration: 0.5s;
+        transition-delay => 2s wait two second in the first and the end
+        transition-property => all is the Default value it means that do it with all the properties 
+                            but we can choose what properties we want for example 
+                            transition-property: padding , font-size;
+                            just these two property will move smoozely
+        transition-timing-function  => 
+                                => ease Default value   slow fast slow
+                                => linear       same speed بشكل خطي
+                                => ease-in      just the begin is slow 
+                                => ease-out     the end is slow
+                                => ease-in-out  slow normal slow
+        transition: padding 1s, font-size 2s; كل واحد الو سرعة
+shorthand => transition => all duration delay linear;
+
+the !important declaration => when we use it with values property 
+                           if i made a website i dont need it but
+                           if i fixed someones wesite i will need it alot 
+                           how we use it :
+                           color : red !important;     
+
+
+index3.html 
+Flexible box => there is properties we give it to the parent 
+                and there is properties we give it to the child 
+        Parent :
+father  1.display : flex | inline-flex => to start flexible box => we dont need overflow      
+father  2.flex-direction : row => the default value => ltr or rtl it depended on the browser direction
+                           row-reverse => they reverse the direction    
+                           column => make them under each other 
+                           column-reverse => make them under each other but the one will be the last element and the four will be the first one
+                note: 
+                        when i change the direction to column the justify content and align items change also
+
+father  3.flex-wrap : no-wrap => always fit all the content on one row + the default value
+                       wrap => now they can wrap
+                       wrap-reverse => بيقلب بالعكس
+        shorthand =>
+                flex-flow : flex-direction flex-wrap;
+ father 4.justify-content : distribution the content inside the flex box
+                           flex-start => the default value
+                           flex-end => the ميلة go start from the end
+                           center => like text align center بس افقي  
+                           space-between => make space between element and element
+                           space-around => make space before and after the element not just between them
+                           space-evenly => ( space-around + space-between )
+        5.align-items : محاذة عاموديا
+                        =>  the default value stretch 
+                        => flex-start
+                        => flex-end
+                        => center
+                note:
+                        display :flex
+                        justify-content : center
+                        align-items : center
+                        (the elements will be in the center) 
+        6.align-content : stretch the default value 
+                the different between content and items is that this one take all the content in the father and move it 
+                but the items one take item item like line line and move it 
+child
+        7.flex-grow : 0 => there is no grow in the content or distribution 
+                      1 => they will grow to fit the content  
+                      3 => grow three time more if i want an element to grow three i will give them this in inline style
+                      but only if it has enough width 
+        8. flex-shrink : 1 the default value that mean there is no effect 
+                         3  that mean shrink the elements
+        9. order :  who before who
+                        order : 6; that mean this will be in the six element position
+                        the big number will be the last number and the small number will be the first number 
+        10.flex-basis : auto the default value
+                        it is similiar to the width but the different is it responsible to the height also
+                        width + height
+        *flex-direction if i was using row it will use the width => 300 as a width 
+                        but i use column it will use the height  => 300 as a height
+                        but not both if them together
+                if i say flex-basis : 300px;
+shorthand => flex : flex-grow flex-shrink flex-basis => 0 1 auto  default value
+        if i want the next content be next the flex i will replace the flex to inline-flex
+        11.align-self : auto the default value 
+                just try it in the element there is a lot values 
+
+index4.html + index5.html 
+.parent > div:nth-child(1) => that mean i want to give properties to the first child that is div
+                        and by changing the number the child change too
+
+
+filters => this property not supported in all browsers so you need to put the prefix first
+                1. filter : grayscale(100%)
+                2. filter : blur(4px)
+                3. filter : ivert(100%) 
+                4. filter : brightness(40%)
+                5. filter : drop-shadow(8px 8px 6px black) => shadow for image
+
+
+caret-color => بغير لون مؤشر الكتابة
+
+
+pointer-events => auto the default value 
+                 none => they change to text 
+                 we use => مثلا لعبة الكلمات والمشنقة بعد ماتختار حرف بدك مايقدر يرجع يكبس عليه فبنقلو نون
+
+
+Grid => parent
+        1. display : grid | inline-grid => if there is an element next them
+        2. grid-template-columns : number of columns => [px] [auto => shy if i use it with another type they only take as they need] [%] [fr => fraction => selfish بياخد كلشي ضل لالو]
+                                   there is a method => repeat(number of columns , type) => repeat(3,auto)
+                                   we can mix it too => 20% 199px auto 1fr repeat(2,50px)
+                                   100px 100px 100px => 3 columns and each one is 100px
+        3. grid-template-row : control the height of each row 
+                                100px 200px => that mean the first row each element in it there height is 100px
+                                and each element in the second row is 200px and all other rows they distribute the father height
+                                as same as columns
+                the strongest => minmax(300px , 400px) that mean if we have a space fill it to 400px 
+                        but if therre no take any number between them
+        4. row-gab : gab between rows 
+        5. column-gab : gab between columns
+        shorthand => gab : row column;
+        5. justify-content : as same as flex but the different is flex need to write the width of each element
+                here we dont need to do it just be careful when you use the fr the justify will not work
+                because there is no space
+        6. align-content : same thing => they work with auto not fr
+        7.grid-template-areas : "logo logo logo . " => that mean logo take three columns
+        + ' . ' dot mean leave a space 
+        we use it with grid-area 
+        8.grid-area : any name 
+                h2 {
+                        grid-area : logo;
+                }
+        9.grid-auto-flow: row the default value;
+                         column => for example we choose that we have only two columns then i add new elements and i want them to be next the two columns
+                         so i use this value to tell him make these new elements next to the two columns
+                         dense => any smaller width come next the real columns 
+                         like if we have two columns in the second row and the first one is 200px and second one is 100px also there a 100px upthe second element will up
+
+        10.grid-auto-columns: 200px => all the element that we add it by the last property make there width 200px
+        child
+        1/-1    => full the row
+        1. grid-column + grid-row : shorthand for grid column start and end
+                         1 / 5 => start from one and stop at five without taking it too
+                         they will take for columns and other column will move to the next free column
+                note => if we have 6 columns that mean we should not use more than 7 number because as we said before the last number will stop at it 
+                        we mean when we said 7 we mean go to the six and stop at seven
+        2. grid-area : [grid row start] / [grid column start] / [grid row end] / [grid column end]
+                    grid-area: 3 / 2 / 6 / 6;
+        note :  repeat(auto-fit or auto-fill , minmax(100px , 1fr))
+                the different between auto fit and auto fill
+                1. auto-fill => after all div ends they will leave a space and مارح يتمدد
+                2. auto-fit => بغير من حجمو مشان يعبي كامل المساحة
+
+index6.html
+transform :   2D => two dimentional transform
+                transform : 
+                dont forget to use the prefiex => -webkit-transform :
+                1. sacle (1 => the default value) or scaleX(1.5) or scaleY(2 ...)
+                                the different between width and scaleX is that the width just increase the width but scaleX بمدلك المحتوى كلو من صور ونصوص وكلشي
+                                scaleX
+                                scaleY 
+                                shorthand => scale
+                        if i use a negative value the element will flip
+                2. rotate ( [deg] [rad] [grad] [turn => 1 turn  لفة وحدة] )
+                                ( 360deg = 6.28rad = 400grad = 1turn )
+                        if i gave them negative value that mean they will rotate in the other side
+the first one   3. translate(x,y) => we use it to move our element in any way we want
+be readen                        towards for x or you
+                                        [%] [px] [rem]
+                4. skew => الانحناء
+                        skew(19deg) = skew(19deg , 0)
+                        skewX
+                        skewY
+                5. matrix ( scaleX() , skewY() , skewX() , scaleY() , translateX() , translateY() )
+                                ( 1 , 0 , 0 , 1 , 0 , 0 )
+transform-origin : => where they gonna start (the root of transform)
+                default value => transform-origin : 50% 50% 0;
+                2D transform => transform-origin(x ,y)
+                3D transform => transform-origin(x ,y ,z)
+                the first value is (X-Axis) 
+                                        - CSS Units [px] [em] [rem]
+                                        - %
+                                        - keyword 
+                                                -left => 0%
+                                                -center => 50%
+                                                -right => 100%
+                the second value is (Y-Axis) 
+                                        - CSS Units [px] [em] [rem]
+                                        - %
+                                        - keyword 
+                                                -top => 0%
+                                                -center => 50%
+                                                -bottom => 100%
+              3D =>  three D transform (x, y, z)
+                1. rotateX(90deg) 
+                   rotateY(90deg)
+                   rotate3d( 0 -> 1 , 0 -> 1 , 0 -> 1 ,زاوية)
+                                (0 , 1 , 1 , 178deg) 
+                2. translate3d(x , y , z) or translatez(4px)
+                        z dont work without this property in the father
+                        that because we need to tell him how much is the space between 
+                        first point and the point that i want to achieve 
+                                        -perspective : 100px; 
+                                        more we increase them the space between me and him will increase 
+                                father {
+                                        perspective : 290px;
+                                        perspective-origin : left top;  there we use this property instead of transform-origin
+                                }
+                                child {
+                                        transform : translatez(60px);
+                                }
+        . backface-visibility : visible the default value
+                                hidden => after i flip the element (after i rotate them more than 90deg) they will disappear         
+        . transform-style : preserve-3d;
+                the default value is flat
+
+....................................................................................................................
+فكرة => inherit => هو عبارة عم قيمة (value)
+         =>بيورث من الاب  
+                => div {
+                        father
+                }
+                div p {
+                        son
+                        property: inherit;
+                }
+                div .Main {
+                        son
+                        property: inherit;
+                }
+
+
+grid system => نظام شبكي وهمي بقسم العناصر تبع صفحة الويب (بنقسم الصفحة لعواميد)
+
+pseudo classes => الكلاسات المزيفة ( : ) => index1 موجود هون
+               => طريقة كتابته ( target : الشي اللي بدي ياه) 
+               وبقدر استخدمو من دون التارغيت
+                        => target :hover { }  => تعني وقت يجي الماوس على المحتوى رح يعمل حركات معينة ممكن يتغير اللون يصغر الخط .....
+                        => :visited { } => بس زرتو عميل التصرف المطلوب
+                        => :link { } => عكس اللي فوقو اذا مانك زايرو عميل هيك
+                        => :empty { } => بس كان فاضي عميل التصرف
+                        => :active { } => ضغطة مطولة
+                        input   => :disable { } => يعني انو بتسكر محل الادخال مابتقدر تكتب شي فيه
+                                                مهم بس كان هيك فعميل الشي اللي بطلبو منك
+                                => :enable { } => عكس اللي فوقو اذا هداك غير موجود فانا بهل الحالة
+                                => :required { } => يعني اذا مطلوب عبيه
+                                => :invalid { } => بيانات خاطئة متل الايميل اروح احط نص 
+                                => :valid { } => عكس اللي فوقو
+                                => :checked { } => بس صار شيك عميل التصرف اللي بدك ياه 
+                                => :focus { } => اول ما ركز ع  شغلة
+
+
+pseudo elements => العناصر المزيفة ( :: )
+                => :: first-letter { } =>  بنعدل ع اول حرف من دون سبان
+                => :: first-line { } => اول سطر 
+                => :: selection { } => وقت بختار وبحدد شغلات بطلع التحديد بالازرق فانا هون بقدر غيرو
+                
+                we can add a word or a form (but we can not use it without content : ' ' )
+                before => if we want to add a word we just write it between ' ' and done
+                After => if we want to add a form we should use it with 
+                1.width and height
+                2.position
+
+
+pseudo elements content and trainings =>
+                                => counter-increment : any name you want => count the elements that have the same class or the same element ( يعني بعد كلشي ديفات او كلشي ديفات لها نفس الكلاس )
+                                then you deceid to use it before or after the element
+                                then we use with content: counter(name)
+                content: attr(data-text) => <div data-text="write any thing you want"> => this is an attribute + them "write any thing you want" appear next to my content
+                                you can also change attribute name _data-text_ بقدر اعرضو وين مابدي وانسقو وعاملو كعنصر
+                                =>display :none => the element disappear 
+                content : url("picture or video or any url link");
+
+
+vendor prefixes => بائع البادئة => browers friends 
+                                 => webkit => Chrome , Safari , New Opera Version
+                                 => moz => Firefox
+                                 => ms(microsoft) => Ie , Edge
+                                 => o => Old Opera Version
+                can i use => a websie tell you if this property is supported or not
+
+the margin collapse  => index2.html
+                [1] only vertical margin collapsing 
+                [2] bigger margin wins   
+                [3] margin collapsing with elements should not have anything between them even the <hr>
+                [4] nesting does not prevent collapsing 
+                                                        <Div><Div>hello</Div></Div>
+                                                        <Div>world</Div> ماباثر دام مافي عناصر تانية جوا النيستد ديف
+
+index2.html  
+CSS Variables => globle variable        anywhere
+              to use the variables we define a variable in the root html with two dashes -- like that
+              :root {
+                --variable name: value;
+                --mainpadding: 10px;
+              }
+              then to use it we write var(variable name, fallback value =>when they can not find the value they will use this instead) in property value
+              padding: var(mainpadding , 5px)
+              => local variable         just in the scope { } 
+              we use it in the same scope not in the root 
+              div {
+                --mainpadding : 15px;
+                background-color : var(--mainpadding); // stronger than the globle if we remove it the will go back to the globle padding 
+              }  
+
+
+.....................................................................................................................
+وحدات القياس:root element => html => 16px => 1em => 100%
+                                   => 32px => 2em => 200%
+        1.px:
+                100px => ....px
+                فكرتا واضحة وسهلة اذا حابة تتذكري شقد البكسل كبري وصغري صفحة الويب عندك بطلعلك طولو وعرضو بالبكسل
+        2.em:
+                em => time 
+                Default Font Size For Web Is 16px => اذا انا ماحددت 
+                1em => 16px
+                2em => 16*2 =32px 
+                بمعنى حسب الفونت سايز font-size
+        3. rem => 1 rem = root size html
+                => html = 20px 
+                =>50px = (20=1 => 2.5)   
+        4.percentage: نسبة مئوية
+                      بالنسبة للاب بكون النسبة
+                      مثال:
+                      الاب => 16 px 
+                      100% => 16px , 120% => اكتر بشوي
+        5.vw:   900 width => 1vw = 9px 
+          viewport width هو المساحة البيضة اللي بطلعلي كلو + هاد العرض بس
+          vh: هو الطول
+          هاد الاحسن من حيث الاستخدام لاني بتكيف حسب حجم الشاشة 
+          100vw => مية بالمية من الشاشة المفتوحة 
+          فكل واحد 
+          مثال:
+          اذا الشاشة عندي (1000px) 10vw = 10% من عرض الشاشة
+....................................................................................................................          
+content width is : 100%
+//اذا عندي تلت عناصر معناتو عندي اربع سباسيز
+4 spaces 1% * 4 => 4% from content width
+96% available  space
+3 elements 96% / 3 => 
+//بنراعي الفواصل لاني رقم زيادة بينزل نصي لتحت
+        1. calc(اي عملية)
+                calc(88% / 5)
+                //اذا عندي تلت عناصر معناتو عندي اربع سباسيز
+                4 spaces 10px * 4 => 40px from content width
+                100%-40 px available  space
+                3 elements (100%-40px) / 3 
+.................................................................................................................... 
+Animation 
+        1-keyframes 
+                @keyframes Animation-Name example change-color {
+                        from {
+                                background-color : red;
+                        }
+                        to {
+                                background-color : green;
+                        }
+                        او
+                        0% {
+                                background-color : red;
+                        }
+                        50% {
+                                background-color : green;
+                        }
+                        100% {
+                                background-color : red;
+                        }
+                } 
+        2-Animation-name : change-color;
+        3-Animation duration : 3s;
+        those three properties will not work if i didnt use them together
+        4-animation-iteration-count: infinite => infinite Animation
+        5-animation-timing-function: ease => the type of Animation how it will be (stright or there a slow in the begin or .....)
+        6-animation-direction: reverse => start from 100% to 0%
+                               normal => the default value
+                               alternate => normal then reverse (like that)   
+                               alternate-reverse => reverse then normal    
+        7-animation-delay: 2s => wait two second before you start
+                          -2s => take two second then start the animation
+        8-animation-fill-mode:  forwards => take the last keyframe style 
+                                none => the default value 
+                                backwards => take the first keyframe style but they will not take the style because of the direction 
+                                so the best value is (both) => depended on the direction
+        9-animation-play-state: running => the default value
+                                pause => stop the animation on the value it is
+shorthand => animation : name duration timing-function delay count direction    
+....................................................................................................................
+
+if i want to hover or..... before and after we wrote it 
+        .classname:hover::before   
+....................................................................................................................
+Selectors :     (grouping) =>.ava,
+                        .atto,  
+                        .julia,
+                        .p {
+                        ونكتب الخواص المشتركة بينن هنا
+                        }   
+                1- * => select all elements in my html code
+                2- Element => [p , div , h1........]
+                3- Element otherElement => div p { } => all the paragraph inside this div
+                4- Class => .class
+                5- id => #id
+                6- .class-one .class-two => يقبل الاحفاد
+                                                <element class="class-one">
+                                                        …
+                                                        <element class="class-two">
+                                                </element>
+                7- .parent > .child {} => حصرا ابناء
+                                                <element class="class-one">
+                                                        <element class="class-two">
+                                                        <element class="class-two"> => also correct
+                                                        <element class="class-two">
+                                                                <div></div> => this is wrong
+                                                        </element>
+
+                                                </element>
+                        
+                <div class="parent">
+                        <div>
+                                <div class="child">not direct</div> 
+                        </div>
+                        <div class="child">direct</div>
+                </div>
+
+                8- .class-one.class-two => <element class="class-one class-two">
+                9- .class div ,
+                   .class p { 
+                   }
+                10- element.class {}
+                        <div class="ava"></div>
+                        <p class="ava"></p>
+                        <p class="ava"></p>
+                p.ava => only paraghraps
+
+                11- Element + otherElement => div + p {}
+                                <div></div>
+                                <p></p>
+                        not : those are wrong
+                                <div></div>
+                                <h2></h2>
+                                <p></p>
+                                or
+                                <div>
+                                        <p></p>
+                                </div>
+                12- Element ~ otherElements => p ~ div {}
+                                <div></div> // it is not next a p
+                                <p></p>
+                                <div></div> // under a paraghraph
+                                <div></div> // under a paraghraph
+                                <h2></h2>
+                                <div></div> // under a paraghraph
+                                <p>
+                                        <div></div> // inside so not
+                                </p>
+
+                13- [Attribute] or Element[Attribute] => <div title="dddd">ava</div>
+                                                         <p title="cccc">ava</p>
+                        [title] or p[title]
+                14- [Attribute="value"] or Element[Attribute="value"] => <div title="dddd">ava</div>
+                                                                         <p title="cccc">ava</p>
+                        [title="cccc"] or p[title="cccc"]
+
+                        USES => input[type="submit"] => we dont need classes
+                15- [Attribute~="value"] => target word
+                ex:     <div title="class div">ava</div> // correct
+                        <div title="div">ava</div> //correct
+                        <p title="testdiv">ava</p> // not correct because its two word in a word
+                        [Attribute~="div"]
+
+                        to fix it
+                16- [Attribute*="value"] => same example but all of them correct bec its target string not only word
+                16- [Attribute^="startFromSomething ..."] => [Attribute^="av"]
+                                                                <div title="avatie">ava</div> // start from av -> correct
+                                                                <p title="avoshka">ava</p> // start from av -> correct 
+
+                17- :first-child 
+                18- :last-child
+                19- :first-of-type => first type only 
+                        p:first-of-type
+                        div
+                        p // correct
+                        p
+                        p
+                        p
+                        div
+                20- :last-of-type
+                21- :only-child => only child in father
+                        <div>
+                                <div></div>
+                                <div></div>
+                                //two child not one
+                        </div>
+                        <div>
+                                <div></div> // correct bec its only  
+                        </div>
+
+                22- :only-of-type => 
+                        div:only-of-type 
+                                <div>
+                                        <div></div>
+                                        <div></div>// there is two div so they will not work
+                                        <p></p>
+                                </div>
+                                <div>
+                                        <div></div> // there a one div so its correct
+                                        <p></p>
+                                </div>
+                23- :not(any thing we use it up there |^|)
+                        :not(:first-child) => all of them except first child
+
+                24- :nth-child()  => index or even or odd
+                        there a website (nth masters)
+                25- :nth-last-child() => p:nth-last-child(4)
+                                        p /1
+                                        p /2
+                                        p /3
+                                        div /4 => y=this is not paraghraph so it will not work
+                                        div /5
+                                        p /6
+                                        p
+                                        p
+                                        p
+                                        div
+                26- :nth-of-type() => p:nth-of-type(4)
+                                        p /1
+                                        p /2
+                                        p /3
+                                        div
+                                        div
+                                        p /4 => correct
+                                        p
+                                        p
+                                        p
+                                        div
+                27- :nth-last-of-type()
+                28- 
+                        - :root
+                        - :checked
+                        - :empty
+                        - :disabled
+                        - :required
+                        - :focus
+                        - ::selection
+                        - ::placeholder
+        ex:     input:checked + label {
+                        that mean when the input is checked make the label ....
+                }
+
+                <input>
+                <label>
+.................................................................................................................
+Media:
+        @media condition {
+                code.html
+        }
+we can use it in other file as css code without @media but we need to put the condition in html code like that =>
+        <link rel="stylesheet" href="CSS/print.css" media="condition"> => it is like a css file there is no media in it so 
+        when we write this that mean if the condition is true use this css file
+        
+        @media print {
+                block of code + the print means( ctrl + p ) if they want to print the results ....
+        }
+
+Some-media-sreens=> 
+        mobile 
+        @media (max-width: 767px) {
+                div {
+                        color : red ;
+                }
+                mobile first always
+        }
+        small screens
+        @media (min-width: 768px) {
+                if i want to make it more specific we put ( and (max-width: 991px) ) next it
+        }
+        Medium screens
+        @media (min-width: 992px) {
+
+        }
+        large screens
+        @media (min-width: 1200px) {
+
+        }
+        X large screens
+        @media (min-width: 1400px) {
+
+        }
+
+        custom 
+        @media  (min-width: 0) and (max-width: 1199px) {
+                or  @media (max-width: 1199px){}
+        }
+and always we need to put meta:vp to html code              
+..............................................................................................................
+Framework : we build a framework for us like 
+        .circle-100 {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+        }   
+        .center-flex {
+                display : flex;
+                justify-content : center;
+                align-items : center;
+        } 
+then we call this classes in html code
+
+
+        - inherit 
+        - initial => the real value like color in my browser there initial value is black
+                        => display => inline but the browers give him block in some properties      
+        - unset
+                -- if it can be inherit => inherit  
+                -- if it can not => initial 
+        - revert => user agent values like (display: block)
+                ex: margin: revert; 8px from user agent 
+        - all => all properties => all: unset;
+
+...................................................................................................................................
+
+NEW :
+        1. html {
+                scroll-behavior: smooth; // that mean go to the top or anywhere smoothly
+        } 
+
+        2. clip-path => (clippy-css clip-path) website
+                     => circle() => create a circle to fit the content
+                     => circle(50px) => the circle will be 50px only + the center of it is at 50% 50%
+                     => circle( 50px at 18% 20%)  
+                     => polygon( روؤس) => polygon( x y, x1 y1 ,x2 y2 , .....)  
+                     => polygon(50% 0 , 0% 100% ,100% 100%) => that mean we have three heads + there احداثيات  
+
+        3. -webkit-appearance: none;
+            => لازالة التصميم الافتراضي => like inputs and so on
+
+        4. element:has(condittion) {
+                what is that ? 
+                this is mean if my element has something inside him do the change 
+                example :
+                div:has(input:checked) {
+                        color:red;
+                }
+                so this is mean if in my div there is a input that checked make every text in this div red
+        }
+        this pseudo is new 
+
+        5.mix-blend-mode : ;
+                => mix image with the background-color
+
