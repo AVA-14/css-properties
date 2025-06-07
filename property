@@ -1042,3 +1042,5 @@ NEW :
         5.mix-blend-mode : ;
                 => mix image with the background-color
 
+         6. in html header we use this to add an icon outside the web page on the top 
+                <link rel="shortcut icon" type="image/x-icon" href="here we add the path of the logo"> 
